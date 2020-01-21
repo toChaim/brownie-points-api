@@ -25,6 +25,7 @@
   "homepage": "https://github.com/toChaim/brownie-points-api#readme",
   "dependencies": {
     "db-migrate-mysql": "^2.1.0",
+    "db-migrate-pg": "^1.0.0",
     "eslint": "^6.8.0",
     "pg": "^7.17.1"
   }

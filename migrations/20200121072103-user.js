@@ -1,27 +1,49 @@
-'use strict';
+"use strict";
 
 var dbm;
 var type;
 var seed;
 
 /**
-  * We receive the dbmigrate dependency from dbmigrate initially.
-  * This enables us to not have to rely on NODE_PATH.
-  */
+ * We receive the dbmigrate dependency from dbmigrate initially.
+ * This enables us to not have to rely on NODE_PATH.
+ */
 exports.setup = function(options, seedLink) {
   dbm = options.dbmigrate;
   type = dbm.dataType;
   seed = seedLink;
 };
 
-exports.up = function(db) {
+exports.up = function(db, callback) {
+  db.createTable(
+    "user",
+    {
+      id: {
+        type: "int",
+        primaryKey: true
+      },
+      user_name: {
+        type: "string",
+        length: 40
+      },
+      email: {
+        type: "string",
+        length: 50
+      }
+    },
+    function(err) {
+      if (err) return callback(err);
+      return callback();
+    }
+  );
   return null;
 };
 
-exports.down = function(db) {
+exports.down = function(db, callback) {
+  db.dropTable("user", callback);
   return null;
 };
 
 exports._meta = {
-  "version": 1
+  version: 1
 };
