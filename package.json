@@ -1,0 +1,29 @@
+{
+  "name": "brownie-points-api",
+  "version": "1.0.0",
+  "description": "api for brownie points",
+  "main": "api.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toChaim/brownie-points-api.git"
+  },
+  "keywords": [
+    "todo",
+    "app",
+    "brownie",
+    "point",
+    "points"
+  ],
+  "author": "Chaim Finkelman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toChaim/brownie-points-api/issues"
+  },
+  "homepage": "https://github.com/toChaim/brownie-points-api#readme",
+  "dependencies": {
+    "eslint": "^6.8.0"
+  }
+}
